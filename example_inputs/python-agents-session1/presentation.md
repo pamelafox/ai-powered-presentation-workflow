@@ -1,0 +1,17 @@
+# Python + Agents: Building your first agent in Python
+
+Date: 2026-02-24
+
+Video: "https://www.youtube.com/watch?v=I4vCp9cpsiI"
+
+Slides: "PythonAgents-BuildingFirstAgent.pdf"
+
+Original description:
+In the first session of our Python + Agents series, we'll kick things off with the fundamentals: what AI agents are, how they work, and how to build your first one using the Microsoft Agent Framework.
+
+We'll start with the core anatomy of an agent, then walk through how tool calling works in practice—beginning with a single tool, expanding to multiple tools, and finally connecting to tools exposed through local MCP servers.
+
+We'll conclude with the supervisor agent pattern, where a single supervisor agent coordinates subtasks across multiple subagents, by treating each agent as a tool.
+
+Along the way, we'll share tips for debugging and inspecting agents, like using the DevUI interface from Microsoft Agent Framework for interacting with agent prototypes.
+
