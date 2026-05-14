@@ -11,7 +11,7 @@ In this exercise, you'll use an AI coding agent plus presentation skills to crea
 
 ---
 
-## Step 1: Creat a topic plan
+## Step 1: Create a topic plan
 
 Create a file named `plan.md` in the root of your workspace. You can either copy an example plan or make your own.
 
@@ -81,12 +81,12 @@ Ask your agent:
 Create a RevealJS slide deck from plan.md. Make 4-6 slides, include speaker notes, and keep the HTML/CSS easy to edit. Put the deck in slides.html.
 ```
 
-When the agent finishes, ensure that it used `make-revealjs-presentation` and inspect the files it created.
+When the agent finishes, ensure that it used `make-revealjs-presentation` and inspect the created files.
 
-Open `slides.html` in a browser. If you're in VS Code, ask the agent to open it:
+Ask VS Code to use the [integrated browser](https://code.visualstudio.com/docs/debugtest/integrated-browser) to open the slides:
 
 ```text
-Open the slides in the integrated browser.
+Open slides.html in the integrated browser.
 ```
 
 Do a quick first pass:
@@ -148,19 +148,13 @@ Pick one slide that feels important, such as the example slide, title slide, or 
 Ask your agent:
 
 ```text
-Before editing files, mock up 3 different ASCII layout ideas for the most important slide in slides.html. Make the options meaningfully different, and briefly explain when each layout would work best.
-```
-
-If you already know which slide needs work, be more specific:
-
-```text
-Before editing files, mock up 3 different ASCII layout ideas for the concrete example slide. I want one option that is diagram-heavy, one that is comparison/table-based, and one that is minimal and presenter-focused.
+Mock up 3 different layout/content ideas for slide X using ASCII.
 ```
 
 Choose your favorite mockup, then ask the agent to apply it:
 
 ```text
-Apply the second ASCII mockup to the example slide in slides.html. Keep the deck readable and preserve the speaker notes.
+Apply the second ASCII mockup to the example slide in slides.html.
 ```
 
 Open the deck again and check whether the slide is easier to explain.
@@ -174,14 +168,6 @@ Now make one or two small improvements based on what you see in the browser.
 Pick prompts that fit your deck:
 
 ```text
-Make the title slide more visually distinctive while keeping it readable.
-```
-
-```text
-Make the example slide easier to understand at a glance.
-```
-
-```text
 Give me 5 ideas for a better title for Slide N.
 ```
 
@@ -190,11 +176,7 @@ Reduce the amount of text on each slide and move extra explanation into speaker 
 ```
 
 ```text
-Make the theme more specific and less generic. Keep the existing structure, but add stronger visual details that match [your theme].
-```
-
-```text
-Check the deck for text that might overflow or be hard to read on a projector, then fix the highest-risk slide.
+Check the deck for text that might overflow or be hard to read on a projector.
 ```
 
 After each edit, reopen or refresh the deck and inspect the result.

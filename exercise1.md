@@ -2,29 +2,13 @@
 
 In this exercise, you'll set up a development environment and coding agent.
 
-- [Step 1: Set up your development environment](#step-1-set-up-your-development-environment)
-- [Step 2: Set up a coding agent](#step-2-set-up-a-coding-agent)
+- [Step 1: Set up VS Code](#step-1-set-up-vs-code)
+- [Step 2: Set up GitHub Copilot](#step-2-set-up-github-copilot)
 - [Step 3: Install the presentation skills](#step-3-install-the-presentation-skills)
 
 ---
 
-## Step 1: Set up your development environment
-
-Pick **one** of the options below to get the tutorial repository open and ready.
-
-### Option A: GitHub Codespaces
-
-Everything is pre-configured — no local installs needed. You just need a [GitHub account](https://github.com/).
-
-1. Login to your GitHub account.
-2. Go to [github.com/pamelafox/ai-powered-presentation-workflow](https://github.com/pamelafox/ai-powered-presentation-workflow).
-3. Click **Code → Codespaces → Create codespace on main**.
-
-   ![Screenshot of Create codespace button](docs/screenshot_codespaces_open.png)
-
-4. Wait for the Codespace to build. Once the editor loads, you're ready to move on to [Step 2](#step-2-set-up-a-coding-agent).
-
-### Option B: VS Code
+## Step 1: Set up VS Code
 
 **Prerequisites:**
 
@@ -46,28 +30,7 @@ Everything is pre-configured — no local installs needed. You just need a [GitH
 
 3. Once the editor loads, you're ready to move on to [Step 2](#step-2-set-up-a-coding-agent).
 
-### Option C: Local environment
-
-If you are going to use a coding agent besides VS Code GitHub Copilot, then you can set up the project in a different IDE.
-
-**Steps:**
-
-1. Clone (or download) the repository:
-
-   ```bash
-   git clone https://github.com/pamelafox/ai-powered-presentation-workflow
-   ```
-
-2. Open the folder in your editor of choice.
-3. Once the editor loads, you're ready to move on to [Step 2](#step-2-set-up-a-coding-agent).
-
----
-
-## Step 2: Set up a coding agent
-
-Set up **one** of the coding agents from instructions below, either [GitHub Copilot in VS Code / Codespaces](#option-a-github-copilot-in-vs-code--codespaces), [GitHub Copilot CLI](#option-b-github-copilot-cli), or [Claude Code](#option-c-claude-code). You are welcome to use another coding agent if you have one installed, as long as it supports agent skills.
-
-### Option A: GitHub Copilot in VS Code / Codespaces
+## Step 2: Set up GitHub Copilot
 
 1. Check the right side of VS Code to see if the Copilot Chat side panel is already open. If it's not open, find the "Toggle Chat" icon at the top of VS Code, locate and click it to open the side panel.
 
@@ -80,34 +43,6 @@ Set up **one** of the coding agents from instructions below, either [GitHub Copi
    ![Screenshot of chat box with "Agent" mode selected](docs/screenshot_copilot_agent.png)
 
 3. Send a test message "Hello" to confirm the agent is working.
-
-### Option B: GitHub Copilot CLI
-
-> You need a [GitHub Copilot subscription](https://github.com/features/copilot) for this option.
-
-1. Install GitHub Copilot CLI by following the [installation guide](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli).
-2. Start up the Copilot CLI:
-
-   ```bash
-   copilot
-   ```
-
-3. Send a test message "Hello" to confirm the agent is working.
-
-### Option C: Claude Code
-
-> You need a [Claude Code](https://code.claude.com/) subscription for this option. For more details on MCP in Claude Code, see the [Claude Code MCP docs](https://code.claude.com/docs/en/mcp).
-
-1. Install Claude Code by following the [installation guide](https://code.claude.com/docs/en/overview).
-2. Start up the Claude Code CLI:
-
-   ```bash
-   claude
-   ```
-
-3. Send a test message "Hello" to confirm the agent is working.
-
----
 
 ## Step 3: Install the presentation skills
 
