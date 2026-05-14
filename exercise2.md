@@ -148,13 +148,13 @@ Pick one slide that feels important, such as the example slide, title slide, or 
 Ask your agent:
 
 ```text
-Mock up 3 different layout/content ideas for slide X using ASCII.
+Mock up 3 different layout/content ideas for slide on "Topic X" using ASCII.
 ```
 
 Choose your favorite mockup, then ask the agent to apply it:
 
 ```text
-Apply the second ASCII mockup to the example slide in slides.html.
+Apply the ASCII mockup N to the example slide in slides.html.
 ```
 
 Open the deck again and check whether the slide is easier to explain.
