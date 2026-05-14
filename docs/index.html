@@ -176,12 +176,7 @@
 
 		.reveal .lead {
 			font-size: 0.98em;
-			max-width: 900px;
-		}
-
-		.reveal .lead.compact {
-			font-size: 0.82em;
-			max-width: 1120px;
+			line-height: 1.2em;
 		}
 
 		.reveal .muted {
@@ -327,6 +322,11 @@
 
 		.visual-row .workflow-step p {
 			display: none;
+		}
+
+		.workflow-caption {
+			color: var(--deck-muted);
+			margin: 60px 0 0;
 		}
 
 		.two-column {
@@ -611,7 +611,6 @@
 
 		.audit-slide .lead {
 			font-size: 0.76em;
-			max-width: 1120px;
 		}
 
 		.audit-prompt {
@@ -619,7 +618,6 @@
 			flex-direction: column;
 			align-items: flex-start;
 			margin-top: 14px;
-			max-width: 840px;
 			width: 100%;
 		}
 
@@ -691,13 +689,11 @@
 
 		.present-slide .lead {
 			font-size: 0.86em;
-			max-width: 1040px;
 		}
 
 		.present-handoff {
-			display: grid;
-			grid-template-columns: 1fr 1.25fr;
-			gap: 22px;
+			display: flex;
+			justify-content: center;
 			margin-top: 28px;
 		}
 
@@ -710,9 +706,11 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			margin: 0 auto;
 			min-height: 290px;
 			padding: 24px;
 			text-align: center;
+			width: 100%;
 		}
 
 		.presenter-icon {
@@ -722,53 +720,25 @@
 			color: var(--deck-cyan);
 			display: flex;
 			font-family: var(--deck-display-font);
-			font-size: 1.65em;
-			height: 118px;
+			font-size: 1.9em;
+			height: 150px;
 			justify-content: center;
 			line-height: 1;
 			margin-bottom: 20px;
-			width: 118px;
+			width: 150px;
 		}
 
 		.presenter-card strong {
 			display: block;
 			font-family: var(--deck-display-font);
-			font-size: 0.82em;
+			font-size: 0.9em;
 			margin-bottom: 10px;
 		}
 
 		.presenter-card p {
-			font-size: 0.62em;
+			font-size: 0.8em;
 			line-height: 1.25;
-			margin: 0;
-		}
-
-		.present-support {
-			display: grid;
-			gap: 14px;
-		}
-
-		.support-item {
-			background: var(--deck-panel);
-			border: 2px solid var(--deck-border);
-			border-radius: 6px;
-			padding: 18px 20px;
-		}
-
-		.support-item span {
-			color: var(--deck-cyan);
-			display: block;
-			font-family: var(--deck-display-font);
-			font-size: 0.5em;
-			font-weight: 850;
-			margin-bottom: 7px;
-			text-transform: uppercase;
-		}
-
-		.support-item p {
-			font-size: 0.62em;
-			line-height: 1.24;
-			margin: 0;
+			margin: 40px 0;
 		}
 
 		.skill-lane {
@@ -946,12 +916,11 @@
 
 		.thank-you-slide .lead {
 			font-size: 0.82em;
-			max-width: 1040px;
 		}
 
 		.thank-you-grid {
 			display: grid;
-			grid-template-columns: 1.15fr 0.85fr;
+			grid-template-columns: 1.6fr 0.85fr;
 			gap: 28px;
 			margin-top: 24px;
 			align-items: stretch;
@@ -980,7 +949,7 @@
 
 		.contact-table td {
 			border: 0;
-			font-size: 0.54em;
+			font-size: 0.8em;
 			line-height: 1.18;
 			padding: 10px;
 			vertical-align: middle;
@@ -988,7 +957,6 @@
 
 		.contact-table td:first-child {
 			color: var(--deck-cyan);
-			font-family: var(--deck-display-font);
 			font-weight: 850;
 			width: 28%;
 		}
@@ -1442,8 +1410,8 @@
 				</section>
 
 				<section>
-					<h3>Presentation prep is a workflow problem</h3>
-					<p class="lead">Every talk moves from planning into a build loop, then delivery, then follow-up materials.</p>
+					<h3>The full presentation workflow, step by step</h3>
+					<p class="lead">Every talk moves from planning into a build loop, then delivery, and finally, follow-up materials.</p>
 					<div class="visual-row">
 						<div class="workflow-step"><span>01</span><strong>Plan</strong><p class="muted">Goals, audience, outline</p></div>
 						<div class="workflow-loop">
@@ -1455,6 +1423,7 @@
 						<div class="workflow-step special"><span>06</span><strong>Present</strong><p class="muted">Deliver the talk</p></div>
 						<div class="workflow-step"><span>07</span><strong>Share</strong><p class="muted">Writeups and alternate formats</p></div>
 					</div>
+					<p class="workflow-caption">Throughout the steps, we can collaborate with AI agents to speed up tasks, improve slide quality, and brainstorm new ideas.</p>
 					<aside class="notes">
 						Frame the big idea: agents get useful when they share the whole workflow, not just a single prompt.
 					</aside>
@@ -1462,7 +1431,7 @@
 
 				<section>
 					<h3>Step 1: Start with a markdown plan</h3>
-					<p class="lead compact">The plan is shared memory: intent, structure, and constraints in one editable place.</p>
+					<p class="lead" style="font-size:0.8em">The plan is shared memory: intent, structure, and constraints in one editable place.</p>
 					<div class="screenshot-frame">
 						<img src="screenshot_plan_with_chat_crop.png" alt="VS Code showing plan.md beside a chat conversation about outlining the lightning talk">
 					</div>
@@ -1544,7 +1513,7 @@
 
 				<section>
 					<h3>Step 4: Iterate on style and content</h3>
-					<p class="lead compact">Once the initial deck exists, improve it with manual edits or small, reviewable asks.</p>
+					<p class="lead">Improve the deck draft with manual edits or small, reviewable asks.</p>
 					<div class="iteration-grid">
 						<div class="iteration-column">
 							<h4>Style passes <span class="browser-chip">browser-verified</span></h4>
@@ -1623,26 +1592,11 @@
 
 				<section class="present-slide">
 					<h3>Step 6: Present the talk</h3>
-					<p class="lead">This is the human step: the workflow has prepared the room, but you still own the story.</p>
 					<div class="present-handoff">
 						<div class="presenter-card">
 							<div class="presenter-icon">YOU</div>
 							<strong>Take the stage</strong>
-							<p>The agent does not present. It helped make the talk easier to deliver.</p>
-						</div>
-						<div class="present-support">
-							<div class="support-item">
-								<span>Final deck</span>
-								<p>Designed, reviewed, and ready to run in the room.</p>
-							</div>
-							<div class="support-item">
-								<span>Speaker notes</span>
-								<p>Your reminders stay attached to the slides, not scattered across chat history.</p>
-							</div>
-							<div class="support-item">
-								<span>Backup context</span>
-								<p>Sources, prompts, and decisions remain nearby when questions come up.</p>
-							</div>
+							<p>The prep was collaborative, but the live story comes from you.</p>
 						</div>
 					</div>
 					<aside class="notes">
@@ -1652,7 +1606,9 @@
 
 				<section>
 					<h3>Step 7: Turn the talk into shareable artifacts</h3>
-					<p class="lead">After delivery, reuse the preserved workflow artifacts instead of starting the follow-up work from scratch.</p>
+					<p class="lead" style="font-size:0.9em">
+						AI agents make it easy to create follow-up materials for different learners and preserve the talk in forms people can revisit, search, and share.
+					</p>
 					<div class="fanout">
 						<div class="share-column inputs">
 							<h4>Inputs</h4>
@@ -1681,7 +1637,7 @@
 
 				<section>
 					<h3>Tip: Use agent skills across the workflow</h3>
-					<p class="lead compact">Agent skills package instructions, workflow knowledge, scripts, and assets.</p>
+					<p class="lead" style="font-size:0.9em">Agent skills package instructions, workflow knowledge, scripts, and assets.</p>
 					<div class="skills-workflow">
 						<div class="skills-how">
 							<div>
@@ -1751,7 +1707,7 @@
 						</table>
 						<div class="thank-you-side">
 							<div class="thank-you-card highlight">
-								<strong>EduSummit tutorial</strong>
+								<strong>Try it yourself!</strong>
 								<p>Come to the tutorial on this topic later today for a hands-on version of the workflow.</p>
 							</div>
 							<div class="thank-you-card">
