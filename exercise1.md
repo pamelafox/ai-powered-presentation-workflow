@@ -121,15 +121,6 @@ npx skills add pamelafox/presentation-skills
 
 That installs the full presentation skill collection.
 
-If you only want the skills used in the first hands-on deck exercise, you can install those individually instead:
-
-```bash
-npx skills add pamelafox/presentation-skills/make-revealjs-presentation
-npx skills add pamelafox/presentation-skills/review-presentation
-```
-
-If your coding agent does not seem to discover the skills after installation, reload VS Code or restart your coding agent.
-
 Ask your agent:
 
 ```text

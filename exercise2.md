@@ -83,19 +83,11 @@ Create a RevealJS slide deck from plan.md. Make 4-6 slides, include speaker note
 
 When the agent finishes, ensure that it used `make-revealjs-presentation` and inspect the files it created.
 
-Open `slides.html` in a browser. You can usually open the file directly, or you can start a local server from the workspace root:
+Open `slides.html` in a browser. If you're in VS Code, ask the agent to open it:
 
-```bash
-npx serve .
+```text
+Open the slides in the integrated browser.
 ```
-
-Or, with Python:
-
-```bash
-python3 -m http.server
-```
-
-If you use a local server, open the local URL that it prints.
 
 Do a quick first pass:
 
@@ -103,8 +95,6 @@ Do a quick first pass:
 - Is the talk the right duration?
 - Is there one concrete example?
 - Are the speaker notes useful?
-
-Do not polish yet. The first deck is just a real artifact to react to.
 
 ---
 
