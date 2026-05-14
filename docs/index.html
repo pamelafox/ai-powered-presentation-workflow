@@ -45,7 +45,7 @@
 
 		.reveal .slides section {
 			text-align: left;
-			padding-top: 0;
+			padding-top: 18px;
 			padding-left: 72px;
 			padding-right: 72px;
 			box-sizing: border-box;
@@ -964,15 +964,26 @@
 			box-shadow: 0 0 22px rgba(43, 93, 255, 0.22), inset 0 0 0 1px rgba(255, 43, 214, 0.14);
 			border-collapse: separate;
 			border-spacing: 0;
+			height: 100%;
 			padding: 12px 16px;
 			width: 100%;
+		}
+
+		.contact-table tbody {
+			display: table-row-group;
+			height: 100%;
+		}
+
+		.contact-table tr {
+			height: 16.66%;
 		}
 
 		.contact-table td {
 			border: 0;
 			font-size: 0.54em;
 			line-height: 1.18;
-			padding: 8px 10px;
+			padding: 10px;
+			vertical-align: middle;
 		}
 
 		.contact-table td:first-child {
@@ -1012,6 +1023,40 @@
 			font-size: 0.58em;
 			line-height: 1.24;
 			margin: 0;
+		}
+
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1.35fr 0.65fr;
+			gap: 28px;
+			margin-top: 18px;
+			align-items: start;
+		}
+
+		.about-copy {
+			padding: 0;
+		}
+
+		.about-copy p {
+			font-size: 0.66em;
+			line-height: 1.24;
+			margin: 0 0 12px;
+		}
+
+		.about-copy .contact-table {
+			box-shadow: none;
+			margin-top: 10px;
+			padding: 8px 10px;
+		}
+
+		.about-photo {
+			border: 2px solid var(--deck-cyan);
+			border-radius: 6px;
+			box-shadow: 0 0 26px rgba(65, 223, 255, 0.28);
+			display: block;
+			max-height: 430px;
+			object-fit: cover;
+			width: 100%;
 		}
 
 		.iteration-grid {
@@ -1084,15 +1129,15 @@
 		.ascii-collage {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 14px 18px;
-			margin-top: 16px;
+			gap: 4px 4px;
+			margin-top: 2px;
 		}
 
 		.ascii-prompt {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			margin-top: 14px;
+			margin-top: 4px;
 		}
 
 		.ascii-prompt-box {
@@ -1105,9 +1150,9 @@
 			font-family: var(--deck-body-font);
 			font-size: 0.22em;
 			font-weight: 700;
-			line-height: 1.18;
+			line-height: 1.08;
 			margin: 0;
-			padding: 16px 18px 14px;
+			padding: 7px 12px 6px;
 			white-space: nowrap;
 			width: 100%;
 		}
@@ -1122,10 +1167,11 @@
 			border: 2px solid var(--deck-border);
 			border-radius: 6px;
 			display: block;
-			max-height: 230px;
+			max-height: 240px;
 			max-width: 100%;
 			width: auto;
 			height: auto;
+			margin: 6px 0;
 		}
 
 		.ascii-shot.wide {
@@ -1133,8 +1179,12 @@
 		}
 
 		.ascii-shot.wide img {
-			max-height: 250px;
+			max-height: 194px;
 			height: auto;
+		}
+
+		.ascii-slide h3 {
+			padding-bottom: 0;
 		}
 
 		.decision-table {
@@ -1348,6 +1398,49 @@
 					</aside>
 				</section>
 
+				<section class="about-slide">
+					<h3>About me</h3>
+					<div class="about-grid">
+						<div class="about-copy">
+							<p>Python Cloud Advocate at Microsoft</p>
+							<p>Formerly: UC Berkeley, Coursera, Khan Academy, Google</p>
+							<p>Find me online at:</p>
+							<table class="contact-table">
+								<tbody>
+									<tr>
+										<td>Mastodon</td>
+										<td><a target="_blank" href="https://fosstodon.org/@pamelafox">@pamelafox@fosstodon.org</a></td>
+									</tr>
+									<tr>
+										<td>BlueSky</td>
+										<td><a target="_blank" href="https://bsky.app/profile/pamelafox.bsky.social">@pamelafox.bsky.social</a></td>
+									</tr>
+									<tr>
+										<td>Twitter</td>
+										<td><a target="_blank" href="https://www.twitter.com/pamelafox">@pamelafox</a></td>
+									</tr>
+									<tr>
+										<td>LinkedIn</td>
+										<td><a target="_blank" href="https://www.linkedin.com/in/pamela-s-fox/">www.linkedin.com/in/pamela-s-fox/</a></td>
+									</tr>
+									<tr>
+										<td>GitHub</td>
+										<td><a target="_blank" href="https://www.github.com/pamelafox">www.github.com/pamelafox</a></td>
+									</tr>
+									<tr>
+										<td>Website</td>
+										<td><a target="_blank" href="https://www.pamelafox.org">pamelafox.org</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<img class="about-photo" src="photo_pamela_olaf.jpg" alt="Photo of Pamela smiling with an Olaf statue">
+					</div>
+					<aside class="notes">
+						Introduce yourself briefly and leave the contact details visible long enough for photos.
+					</aside>
+				</section>
+
 				<section>
 					<h3>Presentation prep is a workflow problem</h3>
 					<p class="lead">Every talk moves from planning into a build loop, then delivery, then follow-up materials.</p>
@@ -1389,13 +1482,12 @@
 
 				<section>
 					<h3>Tip: Choose an LLM-friendly format</h3>
-					<p class="lead">It is close enough to text for the agent, but still close enough to slides for the audience.</p>
 					<table class="decision-table">
 						<thead>
 							<tr>
 								<th>Format</th>
-								<th>Agent edits</th>
-								<th>Human review</th>
+								<th>Agent editability</th>
+								<th>Human reviewability</th>
 								<th>Visual expressivity</th>
 							</tr>
 						</thead>
@@ -1490,11 +1582,11 @@
 					</aside>
 				</section>
 
-				<section>
+				<section class="ascii-slide">
 					<h3>Tip: Ask agent for ASCII slide mockups</h3>
 					<div class="ascii-prompt">
 						<span class="retheme-speaker"><span class="speaker-icon">U</span>User prompt</span>
-						<p class="ascii-prompt-box">Mock up some ASCII diagrams of different ways to approach this slide.</p>
+						<p class="ascii-prompt-box">Mock up ASCII diagrams of different options for slide on "Choose an LLM-friendly format".</p>
 					</div>
 					<div class="ascii-collage">
 						<div class="ascii-shot">
@@ -1584,24 +1676,6 @@
 					</div>
 					<aside class="notes">
 						The key value is that the agent has the plan, deck, notes, and sources. It can generate useful derivatives with much less re-explaining.
-					</aside>
-				</section>
-
-				<section>
-					<h3>The workflow: plan → build → present → share</h3>
-					<div class="final-pattern">
-						<div class="pattern-item"><span>01</span><strong>Plan</strong></div>
-						<div class="pattern-loop">
-							<div class="pattern-item"><span>02</span><strong>Draft</strong></div>
-							<div class="pattern-item"><span>03</span><strong>Style</strong></div>
-							<div class="pattern-item"><span>04</span><strong>Iterate</strong></div>
-							<div class="pattern-item"><span>05</span><strong>Audit</strong></div>
-						</div>
-						<div class="pattern-item special"><span>06</span><strong>Present</strong></div>
-						<div class="pattern-item"><span>07</span><strong>Share</strong></div>
-					</div>
-					<aside class="notes">
-						Leave the room with the pattern, not the tool. The workflow matters more than any one implementation.
 					</aside>
 				</section>
 
